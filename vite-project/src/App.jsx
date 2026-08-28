@@ -23,19 +23,19 @@ setDa(d)
 setPa("")
 console.log(d);
 console.log(e);
-for(let z in e){
-  console.log(z + e[z])
-  if(z=='Pin'||z=='Nmae'||z=='Scheme'||z=='Semester'||z=='BranchCode'){
-  var sto= {
-  Pin:e[z],
- Name:e[z], 
- Schema:e[z],
- Semeter:e[z],
- Brach:e[z]
 
-  }
-}}
-console.log(sto)
+const {semid,Pin,Name,Scheme,Semester,BranchCode}=e;
+console.log(Name)
+const dit ={
+  name: Name,
+  semid:semid,
+  Pin:Pin,
+  Scheme:Scheme,
+  Semester:Semester,
+  Branchcode:BranchCode,
+
+}
+console.log(dit.name)
 
 
 }

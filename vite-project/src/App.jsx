@@ -1,14 +1,13 @@
 
 import { useState } from 'react';
 import './App.css'
+import New1 from './New1'
 
 
 function App(){
 const[pa,setPa]=useState('')
 const[da,setDa]=useState([])
-const user={
-
-}
+const [di, setDi]=useState()
 
 
 
@@ -36,7 +35,7 @@ const dit ={
 
 }
 console.log(dit.name)
-
+setDi(dit)
 
 }
 
@@ -58,7 +57,11 @@ console.log(dit.name)
   )}</p>
 </div>
 
+
+    <New1 an ={di}/>
+
     </div>
+   
   )
 }
 export default App;

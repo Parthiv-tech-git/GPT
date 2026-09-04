@@ -7,7 +7,7 @@ import New1 from './New1'
 function App(){
 const[pa,setPa]=useState('')
 const[da,setDa]=useState([])
-const [di, setDi]=useState()
+const [di, setDi]=useState("")
 
 
 
@@ -58,7 +58,7 @@ setDi(dit)
 </div>
 
 
-    <New1 an ={di}/>
+    <New1 an={di}/>
 
     </div>
    

@@ -1,5 +1,5 @@
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css'
 import New1 from './New1'
 
@@ -10,7 +10,15 @@ const[da,setDa]=useState([])
 const [di, setDi]=useState("")
 const [b ,setB]=useState([])
 
-
+useEffect(()=>{
+   const da = localStorage.getItem("userin");
+ const pi =JSON.parse(da);
+console.log(pi)
+const t =Object.values(pi)
+console.log(t)
+// prompt(`GPT  saying hi to my friend${t[0]}`)
+  setB(t)
+},[])
 
 const checks=async()=>{
 let a= await fetch('/api/api/PreExamination/getAttendanceReport?Pin='+pa);
@@ -40,12 +48,7 @@ setDi(dit)
 
 localStorage.setItem("userin" , JSON.stringify(dit))
 
- const da = localStorage.getItem("userin");
- const pi =JSON.parse(da);
 
-const t =Object.values(pi)
-console.log(t)
- setB(t)
 }
 
 

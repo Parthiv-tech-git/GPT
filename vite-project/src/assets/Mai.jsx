@@ -16,6 +16,9 @@ let b= JSON.parse(a)
 if(b==null){
   nagivation('/')
 }
+else{
+  nagivation('/dashbord')
+}
 console.log(b)
 // localStorage.clear()
 

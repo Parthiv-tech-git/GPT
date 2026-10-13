@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import New1 from './New1'
 import Mai from './assets/Mai';
-
+import Prof from './assets/Prof';
 
 import { Routes, Route } from 'react-router-dom';
 
@@ -18,9 +18,9 @@ import './App.css'
 <div className="main">
 
 <Routes>
-  <Route path='/' element={<Mai  sen={setPdata}      />}/>
-  <Route path='/dashbord' element={<New1  rec={pdata}/>}/>
-    
+  <Route path='/' element={<Mai sen={setPdata} />}/>
+  <Route path='/dashbord' element={<New1   />}/>
+  <Route path='/Profile' element={<Prof res={pdata}/>}/>  
 </Routes>
 
 

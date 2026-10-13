@@ -2,7 +2,7 @@
 import { useState ,useEffect} from 'react';
 import './mai.css'
 import { useNavigate } from 'react-router-dom';
- function Mai({sen}){
+ function Mai(){
   const [pa ,setPa]=useState('')
  
   const nagivation =useNavigate ();
@@ -18,7 +18,7 @@ if(b==null){
 }
 else{
   nagivation('/dashbord')
-}
+} 
 console.log(b)
 // localStorage.clear()
 
@@ -68,7 +68,7 @@ const dit ={
 localStorage.setItem('userde' ,JSON.stringify(dit))
 
 console.log(dit.name)
-sen(dit)
+
   
 
 

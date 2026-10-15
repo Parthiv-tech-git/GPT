@@ -18,15 +18,16 @@ const u= async () => {
 let z= await fetch('/api/api/PreExamination/getAttendanceReport?Pin='+b.Pin);
 let y = await z.json();
 let x =await JSON.parse(y);
-let w = await x.Table[0];
+const w = await x.Table[0];
 
 // var w = await Object.entries(x.Table[0]);
 setTa(w)
-sen(w)
-console.log(x)
 
+console.log(x)
+sen(w)
 }
 u()
+
 },[])
 
 

@@ -9,7 +9,7 @@ import { Routes, Route } from 'react-router-dom';
 import './App.css'
  function App(){
   
-  const[pdata, setPdata]=useState({})
+  const[pdata, setPdata]=useState()
   
   
   
@@ -18,8 +18,8 @@ import './App.css'
 <div className="main">
 
 <Routes>
-  <Route path='/' element={<Mai sen={setPdata} />}/>
-  <Route path='/dashbord' element={<New1   />}/>
+  <Route path='/' element={<Mai />}/>
+  <Route path='/dashbord' element={<New1  sen={setPdata} />}/>
   <Route path='/Profile' element={<Prof res={pdata}/>}/>  
 </Routes>
 

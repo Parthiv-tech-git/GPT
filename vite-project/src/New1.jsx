@@ -1,5 +1,5 @@
 import { useEffect ,useState} from 'react';
-import{FaHome} from 'react-icons/fa'
+import{FaHome,FaUser} from 'react-icons/fa'
 import './q.css'
 import { useNavigate ,Link} from 'react-router-dom';
 
@@ -43,7 +43,9 @@ u()
 
     return(
 <div>
-  <FaHome/>
+  
+
+
   <h1> hello ,{ta.Name}</h1>
 <p></p>
 <p>{ta.Percentage}</p>
@@ -54,9 +56,13 @@ u()
 
   })
 } */}
-<button onClick={tah}>log out</button>
-<Link to='/Profile'><button >profile</button></Link>
+<div className="footer">
+<button onClick={tah}> <FaHome/></button>
+  
+<Link to='/Profile'><button ><FaUser/></button></Link>
 
+ 
+</div>
 
 </div>
     )

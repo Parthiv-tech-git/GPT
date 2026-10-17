@@ -36,33 +36,46 @@ u()
 
 
   //  console.log(rec)
-   const tah =()=>{
-    localStorage.clear();
-    nav('/')
-   }
+   
 
     return(
-<div>
+<div className='par'>
   
 
-
-  <h1> hello ,{ta.Name}</h1>
-<p></p>
-<p>{ta.Percentage}</p>
-<h3>{ta.Pin}</h3>
-{/* {
-  ta[0].map((k,l)=>{
-    <li key={l}>{k}</li>
-
-  })
-} */}
-<div className="footer">
-<button onClick={tah}> <FaHome/></button>
-  
-<Link to='/Profile'><button ><FaUser/></button></Link>
 
  
+ 
+ 
+  <h1> hello ,{ta.Name}</h1>
+<div className="att"><p>{ta.Percentage}</p>
+<h3>{ta.Pin}</h3>
 </div>
+
+\
+
+
+
+
+
+
+
+<div className="footer">
+       <div className="home">
+
+       <Link to='/dashbord'> <button > <FaHome/></button></Link>
+
+       </div>
+
+
+
+          <div className="pro">
+             <Link to='/Profile'><button ><FaUser/></button></Link>
+
+            </div>
+
+ 
+
+    </div>
 
 </div>
     )

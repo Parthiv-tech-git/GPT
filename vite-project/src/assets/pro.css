@@ -2,3 +2,11 @@ li{
     list-style: none;
     padding: 3px;
 }
+.lo{
+    display: flex;
+    background-color: rgb(227, 101, 101);
+    align-self: center;
+    justify-content: center;
+    cursor: pointer;
+
+}

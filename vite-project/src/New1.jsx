@@ -6,6 +6,10 @@ import { useNavigate ,Link} from 'react-router-dom';
 
 function New1({sen}){
 const[ta,setTa]=useState([])
+const[t,setT]=useState([])
+const[te,setTe]=useState([])
+
+
 const nav= useNavigate()
 
 useEffect( ()=>{
@@ -25,8 +29,23 @@ setTa(w)
 
 console.log(x)
 sen(w)
+let k= await fetch('/api/api/Results/GetConsolidatedResults?Pin='+b.Pin);
+let l =await k.json();
+let m= await JSON.parse(l)
+let n= await Object.entries(m.Table[0])
+let g = await Object.entries(m.Table1[0])
+console.log(g)
+
+
+
+setT(n)
+setTe(g)
+
+
 }
 u()
+
+
 
 },[])
 
@@ -34,24 +53,50 @@ u()
 
 
 
-
-  //  console.log(rec)
+//console.log(t.Table[0])
    
 
     return(
 <div className='par'>
   
 
+<header>
+   <h1> hello ,{ta.Name}</h1>
+</header>
+<div className="clg">
+   {t.map((v,i)=>
+(
+  <li key={i}>{v[0]} :{v[1]}</li>
+)
 
- 
- 
- 
-  <h1> hello ,{ta.Name}</h1>
-<div className="att"><p>{ta.Percentage}</p>
-<h3>{ta.Pin}</h3>
+)
+  
+}
 </div>
 
-\
+ 
+ 
+ 
+<div className="att">
+  <h3 id='a'>Attendence:</h3>
+  <h3>{ta.Pin}</h3>
+  <p>{ta.Percentage}</p>
+  <p>{ta.BranchCode}</p>
+  <p>{ta.UpdatedDate}</p>
+
+
+</div>
+<div className="pre">
+  {te.map((v,i)=>
+(
+  <li key={i}>{v[0]} :{v[1]}</li>
+)
+
+)
+  
+}
+</div>
+
 
 
 

@@ -7,7 +7,7 @@ function Prof ({res}){
     const nav =useNavigate();
 console.log(res);
 
-const  li =Object.entries(res) // converting into object to array 
+const  li =res // converting into object to array 
 console.log(li)
 
 const tah =()=>{

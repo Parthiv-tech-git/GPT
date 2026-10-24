@@ -28,7 +28,7 @@ const w = await x.Table[0];
 setTa(w)
 
 console.log(x)
-sen(w)
+
 let k= await fetch('/api/api/Results/GetConsolidatedResults?Pin='+b.Pin);
 let l =await k.json();
 let m= await JSON.parse(l)
@@ -40,7 +40,7 @@ console.log(g)
 
 setT(n)
 setTe(g)
-
+sen(n)
 
 }
 u()
@@ -60,10 +60,10 @@ u()
 <div className='par'>
   
 
-<header>
+
    <h1> hello ,{ta.Name}</h1>
-</header>
-<div className="clg">
+
+{/* <div className="clg">
    {t.map((v,i)=>
 (
   <li key={i}>{v[0]} :{v[1]}</li>
@@ -72,7 +72,7 @@ u()
 )
   
 }
-</div>
+</div> */}
 
  
  

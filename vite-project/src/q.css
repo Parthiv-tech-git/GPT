@@ -1,4 +1,4 @@
-
+/* 
 *{
  box-sizing: border-box;
  margin: 0%;
@@ -22,7 +22,7 @@ width: 100%;
 background-color: rgb(225, 225, 212);
 display: flex;
 flex-direction: column;
-/* padding-left: 44; */
+
 margin: 50px;
 box-sizing: border-box;
 padding: 8px 0px 8px 45%;
@@ -57,4 +57,189 @@ justify-self: flex-start;
     padding: 4px 0px 
     4px 45%;
 
+} */
+
+/* =========================
+   1. Global Reset
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body,
+#root {
+    min-height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f7fb;
+    color: #1e293b;
+    line-height: 1.5;
+}
+
+/* =========================
+   2. Main Container
+========================= */
+
+.par {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    padding: 30px 20px 110px;
+    background: linear-gradient(
+        135deg,
+        #f4f7fb,
+        #e9eef8
+    );
+}
+
+/* =========================
+   3. Heading
+========================= */
+
+h1 {
+    position: relative;
+    z-index: 1;
+    margin: 0 0 25px;
+    font-size: clamp(24px, 4vw, 34px);
+    font-weight: 700;
+    color: #172554;
+    text-align: center;
+}
+
+/* =========================
+   4. Attendance Card
+========================= */
+
+.att {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.06);
+}
+
+/* =========================
+   5. List Items
+========================= */
+
+li {
+    list-style: none;
+}
+
+/* =========================
+   6. Previous / Information Card
+========================= */
+
+.pre {
+    padding: 15px 20px;
+    background-color: #e0f2fe;
+    color: #075985;
+    border-left: 4px solid #0284c7;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+/* =========================
+   7. Footer Navigation
+========================= */
+
+.footer {
+    position: fixed;
+    z-index: 100;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 15px;
+
+    padding: 15px 20px;
+    background-color: rgba(255, 255, 255, 0.96);
+    border-top: 1px solid #e2e8f0;
+    box-shadow: 0 -5px 20px rgba(15, 23, 42, 0.05);
+}
+
+/* =========================
+   8. Footer Items
+========================= */
+
+.home,
+.pro {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px;
+    color: #475569;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+
+    border-radius: 10px;
+    transition: background-color 0.2s ease,
+                color 0.2s ease;
+}
+
+.home:hover,
+.pro:hover {
+    color: #2563eb;
+    background-color: #eff6ff;
+}
+
+/* =========================
+   9. Special Element
+========================= */
+
+#a {
+    color: #65a30d;
+}
+
+/* =========================
+   10. Mobile Responsive
+========================= */
+
+@media (max-width: 600px) {
+    .par {
+        padding: 25px 15px 100px;
+    }
+
+    h1 {
+        margin-bottom: 20px;
+        font-size: 25px;
+    }
+
+    .att {
+        padding: 18px;
+        border-radius: 14px;
+    }
+
+    .footer {
+        padding: 12px 10px;
+        gap: 8px;
+    }
+
+    .home,
+    .pro {
+        padding: 10px 5px;
+        font-size: 14px;
+    }
 }

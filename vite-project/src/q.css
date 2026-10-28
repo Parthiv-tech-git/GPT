@@ -1,245 +1,232 @@
-/* 
-*{
- box-sizing: border-box;
- margin: 0%;
- color: black;
-}.par{
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    padding: 300px;
-background-color:rgb(235, 235, 244) ;
-}h1{
-position: absolute;
-z-index: 11;
-top: 80px;
-margin: 4%;
-
-}
-.att{
-    box-sizing: border-box;
-width: 100%;
-background-color: rgb(225, 225, 212);
-display: flex;
-flex-direction: column;
-
-margin: 50px;
-box-sizing: border-box;
-padding: 8px 0px 8px 45%;
-gap: 4px;
-}
 
 
-
-li{
-    list-style: none;
-  
-}.footer{
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
-    gap: 5px;
-     position: absolute;
-     background-color:rgb(244, 239, 244) ;
-     width: 100vw;
-    bottom: 0;
-border-radius: 5px solid black;
-padding: 50px;
-}.home,.pro{
-    width: 80%;
-   
-}#a{
-   color: yellowgreen;
-justify-self: flex-start;
-
-}.pre{
-    background-color: cadetblue;
-    padding: 4px 0px 
-    4px 45%;
-
-} */
-
-/* =========================
-   1. Global Reset
-========================= */
-
+/* Global settings */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-
-html,
-body,
-#root {
-    min-height: 100%;
-    width: 100%;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f7fb;
-    color: #1e293b;
-    line-height: 1.5;
-}
-
-/* =========================
-   2. Main Container
-========================= */
-
-.par {
-    position: relative;
     min-height: 100vh;
-    width: 100%;
-    padding: 30px 20px 110px;
-    background: linear-gradient(
-        135deg,
-        #f4f7fb,
-        #e9eef8
-    );
+    min-width: 100%;
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+    color: #1e293b;
+    background-color: #f1f5f9;
 }
 
-/* =========================
-   3. Heading
-========================= */
-
-h1 {
-    position: relative;
-    z-index: 1;
-    margin: 0 0 25px;
-    font-size: clamp(24px, 4vw, 34px);
-    font-weight: 700;
-    color: #172554;
-    text-align: center;
-}
-
-/* =========================
-   4. Attendance Card
-========================= */
-
-.att {
+/* Main container */
+.par {
     width: 100%;
-    max-width: 650px;
-    margin: 0 auto;
-    padding: 25px;
+    min-height: 100vh;
+
+    background: linear-gradient(135deg, #eff6ff, #f8fafc);
+
     display: flex;
     flex-direction: column;
-    gap: 15px;
+
+    padding: 60px 25px 110px;
+
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Main heading */
+h1 {
+    align-self: flex-start;
+    width: 100%;
+    max-width: 450px;
+
+    margin: 0 auto 10px;
+
+    color: #172554;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+/* Attendance section */
+.att {
+    background-color: #ffffff;
+
+    max-width: 450px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 25px;
+    gap: 12px;
+
+    margin-top: 15px;
+
+    border: 1px solid #dbeafe;
+    border-left: 5px solid #2563eb;
+    border-radius: 16px;
+
+    box-shadow: 0 5px 18px rgba(30, 64, 175, 0.07);
+}
+
+/* Examination section */
+.pre {
+    background-color: #ffffff;
+
+    max-width: 450px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 25px;
+    gap: 12px;
+
+    margin-top: 18px;
+
+    border: 1px solid #d1fae5;
+    border-left: 5px solid #059669;
+    border-radius: 16px;
+
+    box-shadow: 0 5px 18px rgba(5, 150, 105, 0.07);
+}
+
+/* Text inside both sections */
+.att h2,
+.pre h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.att p,
+.pre p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #64748b;
+}
+
+/* Important percentage values */
+.att h1 {
+    color: #2563eb;
+    font-size: 32px;
+    margin: 0;
+}
+
+.pre h1 {
+    color: #059669;
+    font-size: 32px;
+    margin: 0;
+}
+
+/* Bottom navigation */
+.footer {
+    width: calc(100% - 30px);
+    max-width: 450px;
 
     background-color: #ffffff;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    gap: 12px;
+    padding: 12px;
+
+    position: fixed;
+    left: 50%;
+    bottom: 12px;
+    transform: translateX(-50%);
+
     border: 1px solid #e2e8f0;
     border-radius: 18px;
 
-    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.06);
-}
+    box-shadow: 0 6px 25px rgba(15, 23, 42, 0.12);
 
-/* =========================
-   5. List Items
-========================= */
-
-li {
-    list-style: none;
-}
-
-/* =========================
-   6. Previous / Information Card
-========================= */
-
-.pre {
-    padding: 15px 20px;
-    background-color: #e0f2fe;
-    color: #075985;
-    border-left: 4px solid #0284c7;
-    border-radius: 10px;
-    font-weight: 600;
-}
-
-/* =========================
-   7. Footer Navigation
-========================= */
-
-.footer {
-    position: fixed;
     z-index: 100;
-    bottom: 0;
-    left: 0;
-
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 15px;
-
-    padding: 15px 20px;
-    background-color: rgba(255, 255, 255, 0.96);
-    border-top: 1px solid #e2e8f0;
-    box-shadow: 0 -5px 20px rgba(15, 23, 42, 0.05);
 }
 
-/* =========================
-   8. Footer Items
-========================= */
-
+/* Home and Profile */
 .home,
 .pro {
     flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-    padding: 10px;
+    min-height: 65px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    background-color: #f1f5f9;
     color: #475569;
-    text-align: center;
-    text-decoration: none;
-    font-size: 15px;
+
+    gap: 8px;
+    padding: 10px;
+
+    border: 1px solid transparent;
+    border-radius: 12px;
+
+    font-family: inherit;
+    font-size: 13px;
     font-weight: 600;
 
-    border-radius: 10px;
-    transition: background-color 0.2s ease,
-                color 0.2s ease;
+    text-decoration: none;
+    cursor: pointer;
+
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
+/* Icons */
+.home svg,
+.pro svg {
+    font-size: 21px;
+}
+
+/* Hover effects */
 .home:hover,
 .pro:hover {
-    color: #2563eb;
-    background-color: #eff6ff;
+    background-color: #dbeafe;
+    color: #1d4ed8;
 }
 
-/* =========================
-   9. Special Element
-========================= */
-
-#a {
-    color: #65a30d;
-}
-
-/* =========================
-   10. Mobile Responsive
-========================= */
-
-@media (max-width: 600px) {
+/* Mobile screen adjustment */
+@media (max-width: 480px) {
     .par {
-        padding: 25px 15px 100px;
+        padding: 35px 18px 105px;
     }
 
     h1 {
-        margin-bottom: 20px;
         font-size: 25px;
     }
 
-    .att {
-        padding: 18px;
+    .att,
+    .pre {
+        padding: 20px;
+        margin-top: 15px;
+        gap: 10px;
         border-radius: 14px;
     }
 
+    .att h2,
+    .pre h2 {
+        font-size: 18px;
+    }
+
+    .att h1,
+    .pre h1 {
+        font-size: 28px;
+    }
+
     .footer {
-        padding: 12px 10px;
-        gap: 8px;
+        bottom: 10px;
+        width: calc(100% - 24px);
+        padding: 9px;
     }
 
     .home,
     .pro {
-        padding: 10px 5px;
-        font-size: 14px;
+        min-height: 58px;
+        font-size: 12px;
     }
 }

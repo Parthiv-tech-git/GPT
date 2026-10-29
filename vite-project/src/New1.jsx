@@ -103,11 +103,11 @@ u()
  
 <div className="att">
   <h3 id='a'>Attendence:</h3>
-  <h3>{ta.Pin}</h3>
-  <p>{ta.Percentage}%</p>
-  <p>{ta.BranchCode}</p>
-  <p>{ta.UpdatedDate}</p>
-  <p> AS pre Exam :{ta.ExamsPer}%</p>
+  <h3> {ta.Pin}</h3>
+  <p>  {ta.Percentage}%</p>
+  <p>  {ta.BranchCode}</p>
+  <p>  {ta.UpdatedDate}</p>
+  <p>  AS pre Exam :{ta.ExamsPer}%</p>
 
 
 

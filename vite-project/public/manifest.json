@@ -1,0 +1,26 @@
+{
+  "name": "GPT Attendance Portal",
+  "creator,desginer,coder,tester,impleneted":"MR.PARTHIV KUMAR ",
+  "short_name": "GPT CAmpus",
+  "description": "Check student attendance, examination percentages, and academic credits.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "/ICON.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/ICON.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

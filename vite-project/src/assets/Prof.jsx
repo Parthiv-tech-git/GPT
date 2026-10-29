@@ -1,6 +1,6 @@
 // import { useState } from 'react';
 // import { Navigate, useNavigate } from 'react-router-dom';
-// import './pro.css'
+// 
 // function Prof ({res}){
 
 
@@ -56,7 +56,8 @@
 
 import React from "react";
 import { FaUserGraduate, FaIdCard, FaUniversity, FaCode,FaSignOutAlt } from "react-icons/fa";
-import "./Pro.css";
+
+import './pro.css'
 import { useNavigate } from "react-router-dom";
 
 function Prof({res}) {

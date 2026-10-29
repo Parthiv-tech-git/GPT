@@ -29,7 +29,10 @@ setTa(w)
 
 console.log(x)
 
-let k= await fetch('/api/api/Results/GetConsolidatedResults?Pin='+b.Pin);
+let k= await fetch(
+`https://www.sbtet.telangana.gov.in/api/api/PreExamination/getAttendanceReport?Pin=${encodeURIComponent(b.Pin)}`
+);
+
 let l =await k.json();
 let m= await JSON.parse(l)
 let n= await Object.entries(m.Table[0])

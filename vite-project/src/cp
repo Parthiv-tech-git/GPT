@@ -91,3 +91,19 @@ localStorage.setItem("userin" , JSON.stringify(dit))
   )
 }
 export default App;
+
+
+
+
+
+profile-container
+│
+├── profile-header
+│   ├── profile-icon
+│   └── Title + Description
+│
+└── profile-details
+    ├── profile-item → Student Name
+    ├── profile-item → Student PIN
+    ├── profile-item → College Name
+    └── profile-item → College Code

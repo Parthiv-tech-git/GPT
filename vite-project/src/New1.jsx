@@ -61,7 +61,7 @@ u()
   
 
 
-   <h1> hello ,{ta.Name}</h1>
+   <h1> Hello ,{ta.Name}</h1>
 
 {/* <div className="clg">
    {t.map((v,i)=>
@@ -80,13 +80,17 @@ u()
 <div className="att">
   <h3 id='a'>Attendence:</h3>
   <h3>{ta.Pin}</h3>
-  <p>{ta.Percentage}</p>
+  <p>{ta.Percentage}%</p>
   <p>{ta.BranchCode}</p>
   <p>{ta.UpdatedDate}</p>
+  <p> AS pre Exam :{ta.ExamsPer}%</p>
+
 
 
 </div>
 <div className="pre">
+  <h3 id='a'>Your credits:</h3>
+
   {te.map((v,i)=>
 (
   <li key={i}>{v[0]} :{v[1]}</li>

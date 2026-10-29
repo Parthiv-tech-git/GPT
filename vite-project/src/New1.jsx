@@ -19,7 +19,7 @@ console.log(b.Pin)
 const u= async () => {
   
 
-let z= await fetch('/api/api/PreExamination/getAttendanceReport?Pin='+b.Pin);
+let z= await fetch(`/api/api/PreExamination/getAttendanceReport?Pin=${b.Pin}`);
 let y = await z.json();
 let x =await JSON.parse(y);
 const w = await x.Table[0];

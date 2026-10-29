@@ -17,9 +17,27 @@ let a= localStorage.getItem('userde');
 let b= JSON.parse(a)
 console.log(b.Pin)
 const u= async () => {
-  
+  const attendanceURL = import.meta.env.DEV
+  ? `/sbtet-api/PreExamination/getAttendanceReport?Pin=${encodeURIComponent(b.Pin)}`
+  : `/api/attendance?pin=${encodeURIComponent(b.Pin)}`;
 
-let z= await fetch(`/api/api/PreExamination/getAttendanceReport?Pin=${b.Pin}`);
+//let z= await fetch(`/api/api/PreExamination/getAttendanceReport?Pin=${encodeURIComponent(b.Pin)}`);
+let z= await fetch(attendanceURL);
+
+
+    // const apiURL =
+    //   "https://www.sbtet.telangana.gov.in/api/api/PreExamination/getAttendanceReport";
+
+    // const z = await fetch(
+    //   `${apiURL}?Pin=${encodeURIComponent(b.Pin)}`
+    // );
+
+
+
+
+
+
+
 let y = await z.json();
 let x =await JSON.parse(y);
 const w = await x.Table[0];
@@ -29,10 +47,13 @@ setTa(w)
 
 console.log(x)
 
-let k= await fetch(
-`https://www.sbtet.telangana.gov.in/api/api/PreExamination/getAttendanceReport?Pin=${encodeURIComponent(b.Pin)}`
-);
 
+
+
+
+
+
+let k= await fetch('/api/api/Results/GetConsolidatedResults?Pin='+b.Pin);
 let l =await k.json();
 let m= await JSON.parse(l)
 let n= await Object.entries(m.Table[0])

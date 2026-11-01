@@ -51,13 +51,17 @@ after some days i used chatgpt for improve the desgin of application.
 
 -
  ## author
- - Parthiv kumar 
+ - Mr. Parthiv kumar 
  - https://github.com/Parthiv-tech-git/GPT
 
  ---
  ## output 
 --
-
+[GPT CAmpus](https://gpt-eight-gules.vercel.app/)
+---
+![Loginpage](pin.png)
+![dashbord](dass.png)
+![pro](pro.png)
 
 ---
  
